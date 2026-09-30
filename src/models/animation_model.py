@@ -2,6 +2,7 @@
 
 import random
 
+
 class Raindrop:
     """Класс, описывающий отдельную каплю дождя с учетом перспективы (3D)."""
 
@@ -16,11 +17,11 @@ class Raindrop:
         self.screen_height = screen_height
         self.x = random.randint(0, screen_width)
         self.y = random.randint(-50, screen_height)
-        
-        # Z-ось для 3D-эффекта (от 1 до 20). 
+
+        # Z-ось для 3D-эффекта (от 1 до 20).
         # Чем больше Z, тем дальше капля.
         self.z = random.randint(1, 20)
-        
+
         # Вычисление параметров на основе дальности (Z)
         # Близкие капли (z маленькое) падают быстрее и имеют больший размер
         self.speed_y = (20 / self.z) + random.uniform(2, 5)

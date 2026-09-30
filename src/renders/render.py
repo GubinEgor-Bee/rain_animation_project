@@ -2,6 +2,7 @@
 
 import tkinter as tk
 
+
 class RainRenderer:
     """Класс, отвечающий за отрисовку капель дождя на холсте."""
 
@@ -23,16 +24,20 @@ class RainRenderer:
         """
         # Очистка холста перед новым кадром
         self.canvas.delete("all")
-        
+
         for drop in drops:
             # Цвет зависит от дальности (Z): дальние капли темнее
             color_intensity = max(50, 255 - (drop.z * 10))
-            color_hex = f"#{color_intensity:02x}{color_intensity:02x}ff" # Оттенки синего
-            
+            color_hex = (
+                f"#{color_intensity:02x}{color_intensity:02x}ff"  # Оттенки синего
+            )
+
             # Рисование линии (капли)
             self.canvas.create_line(
-                drop.x, drop.y, 
-                drop.x, drop.y + drop.length, 
-                fill=color_hex, 
-                width=drop.width
+                drop.x,
+                drop.y,
+                drop.x,
+                drop.y + drop.length,
+                fill=color_hex,
+                width=drop.width,
             )

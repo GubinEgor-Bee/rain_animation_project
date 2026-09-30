@@ -23,5 +23,4 @@
 
 ### 1. Клонирование репозитория
 ```bash
-git clone [https://github.com/username/project-name.git](https://github.com/username/project-name.git)
-cd project-name
+git clone [https://github.com/GubinEgor-Bee/rain_animation_project.git](https://github.com/GubinEgor-Bee/rain_animation_project.git)
